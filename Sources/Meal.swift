@@ -25,9 +25,11 @@ public struct Meal: Codable {
 extension Meal {
     /// A meal's cost.
     public struct Price: Codable {
-        public let students: Double
-        public let employees: Double
-        public let pupils: Double
-        public let others: Double
+        public let students: Double?
+        public let employees: Double?
+        public let pupils: Double?
+        public let others: Double?
+    }
+}
     }
 }
