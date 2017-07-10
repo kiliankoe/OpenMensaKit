@@ -20,6 +20,15 @@ public struct Meal: Codable {
     public let price: Price
     /// Additional notes.
     public let notes: [String]
+
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case category
+        case price = "prices"
+        case notes
+    }
+}
 }
 
 extension Meal {
