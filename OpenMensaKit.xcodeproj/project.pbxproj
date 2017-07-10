@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39180C351F13D81D0045B00C /* Canteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39180C341F13D81D0045B00C /* Canteen.swift */; };
+		39180C361F13D81D0045B00C /* Canteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39180C341F13D81D0045B00C /* Canteen.swift */; };
+		39180C371F13D81D0045B00C /* Canteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39180C341F13D81D0045B00C /* Canteen.swift */; };
+		39180C381F13D81D0045B00C /* Canteen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39180C341F13D81D0045B00C /* Canteen.swift */; };
+		39180C3A1F13D9D90045B00C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39180C391F13D9D90045B00C /* Meal.swift */; };
+		39180C3B1F13D9D90045B00C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39180C391F13D9D90045B00C /* Meal.swift */; };
+		39180C3C1F13D9D90045B00C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39180C391F13D9D90045B00C /* Meal.swift */; };
+		39180C3D1F13D9D90045B00C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39180C391F13D9D90045B00C /* Meal.swift */; };
 		52D6D9871BEFF229002C0205 /* OpenMensaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* OpenMensaKit.framework */; };
 		8933C7851EB5B820000D00A4 /* OpenMensaKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* OpenMensaKit.swift */; };
 		8933C7861EB5B820000D00A4 /* OpenMensaKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* OpenMensaKit.swift */; };
@@ -44,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39180C341F13D81D0045B00C /* Canteen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canteen.swift; sourceTree = "<group>"; };
+		39180C391F13D9D90045B00C /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		52D6D97C1BEFF229002C0205 /* OpenMensaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenMensaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* OpenMensaKit-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OpenMensaKit-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9E21BEFFF6E002C0205 /* OpenMensaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenMensaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				8933C7841EB5B820000D00A4 /* OpenMensaKit.swift */,
+				39180C341F13D81D0045B00C /* Canteen.swift */,
+				39180C391F13D9D90045B00C /* Meal.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -347,7 +359,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = "OpenMensaKit";
+				ORGANIZATIONNAME = OpenMensaKit;
 				TargetAttributes = {
 					52D6D97B1BEFF229002C0205 = {
 						CreatedOnToolsVersion = 7.1;
@@ -459,6 +471,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39180C351F13D81D0045B00C /* Canteen.swift in Sources */,
+				39180C3A1F13D9D90045B00C /* Meal.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* OpenMensaKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +489,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39180C371F13D81D0045B00C /* Canteen.swift in Sources */,
+				39180C3C1F13D9D90045B00C /* Meal.swift in Sources */,
 				8933C7871EB5B820000D00A4 /* OpenMensaKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +499,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39180C381F13D81D0045B00C /* Canteen.swift in Sources */,
+				39180C3D1F13D9D90045B00C /* Meal.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* OpenMensaKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +509,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39180C361F13D81D0045B00C /* Canteen.swift in Sources */,
+				39180C3B1F13D9D90045B00C /* Meal.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* OpenMensaKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
