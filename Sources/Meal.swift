@@ -29,6 +29,21 @@ public struct Meal: Codable {
         case notes
     }
 }
+
+extension Meal: Comparable {
+    public static func <(lhs: Meal, rhs: Meal) -> Bool {
+        return lhs.id < rhs.id
+    }
+
+    public static func ==(lhs: Meal, rhs: Meal) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+extension Meal: Hashable {
+    public var hashValue: Int {
+        return self.id.hashValue
+    }
 }
 
 extension Meal {
@@ -40,5 +55,13 @@ extension Meal {
         public let others: Double?
     }
 }
+
+extension Meal.Price: Equatable {
+    public static func ==(lhs: Meal.Price, rhs: Meal.Price) -> Bool {
+        return
+            lhs.students == rhs.students &&
+            lhs.employees == rhs.employees &&
+            lhs.pupils == rhs.pupils &&
+            lhs.others == rhs.others
     }
 }

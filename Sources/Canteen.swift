@@ -30,3 +30,18 @@ public struct Canteen: Codable {
     }
 }
 
+extension Canteen: Comparable {
+    public static func <(lhs: Canteen, rhs: Canteen) -> Bool {
+        return lhs.id < rhs.id
+    }
+
+    public static func ==(lhs: Canteen, rhs: Canteen) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+extension Canteen: Hashable {
+    public var hashValue: Int {
+        return self.id.hashValue
+    }
+}
