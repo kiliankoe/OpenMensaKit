@@ -1,5 +1,5 @@
 //
-//  OpenMensaKitTests.swift
+//  CanteenTests.swift
 //  OpenMensaKit
 //
 //  Created by Kilian Koeltzsch on 10.07.17.
@@ -11,7 +11,7 @@ import XCTest
 import struct CoreLocation.CLLocationCoordinate2D
 import OpenMensaKit
 
-class OpenMensaKitTests: XCTestCase {
+class CanteenTests: XCTestCase {
     func testGetSingleCanteen() {
         let e = expectation(description: "Get a result for a single canteen")
 
