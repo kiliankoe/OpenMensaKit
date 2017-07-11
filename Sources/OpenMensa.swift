@@ -13,7 +13,7 @@ enum OpenMensa {
     static let canteensURL = URL(string: "canteens/", relativeTo: baseURL)!
 
     static func menuURL(forCanteenID id: Int, onDay day: Date) -> URL {
-        return URL(string: "\(id)/days/\(shortISOFormatter.string(from: day))", relativeTo: canteensURL)!
+        return URL(string: "\(id)/days/\(shortISOFormatter.string(from: day))/meals", relativeTo: canteensURL)!
     }
 
     private static let shortISOFormatter: DateFormatter = {
