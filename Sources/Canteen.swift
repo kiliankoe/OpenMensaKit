@@ -46,6 +46,12 @@ extension Canteen: Hashable {
 // MARK: - API
 
 extension Canteen {
+    /// Get a single canteen given it's ID.
+    ///
+    /// - Parameters:
+    ///   - id: id
+    ///   - session: URLSession, defaults to .shared
+    ///   - completion: handler
     public static func get(withID id: Int, session: URLSession = .shared, completion: @escaping (Result<Canteen>) -> Void) {
         let request = URLRequest(url: URL(string: "\(id)", relativeTo: OpenMensa.canteensURL)!)
         Network.dataTask(request: request, session: session, completion: completion)
