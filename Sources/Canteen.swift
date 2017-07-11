@@ -11,7 +11,7 @@ import CoreLocation
 
 /// A place to eat.
 public struct Canteen: Codable {
-    /// Distinct ID.
+    /// Unique ID.
     public let id: Int
     /// Name.
     public let name: String

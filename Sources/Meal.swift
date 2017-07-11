@@ -10,7 +10,7 @@ import Foundation
 
 /// Something to eat.
 public struct Meal: Codable {
-    /// Distinct ID.
+    /// Unique ID.
     public let id: Int
     /// Name.
     public let name: String
