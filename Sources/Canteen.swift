@@ -57,7 +57,7 @@ extension Canteen {
         Network.dataTask(request: request, session: session, completion: completion)
     }
 
-    /// Get a list of canteen given their IDs.
+    /// Get a list of canteens given their IDs.
     ///
     /// - Parameters:
     ///   - ids: ids
