@@ -56,4 +56,16 @@ extension Canteen {
         let request = URLRequest(url: URL(string: "\(id)", relativeTo: OpenMensa.canteensURL)!)
         Network.dataTask(request: request, session: session, completion: completion)
     }
+
+    /// Get a list of canteen given their IDs.
+    ///
+    /// - Parameters:
+    ///   - ids: ids
+    ///   - session: URLSession, defaults to .shared
+    ///   - completion: handler
+    public static func get(withIDs ids: [Int], session: URLSession = .shared, completion: @escaping (Result<[Canteen]>) -> Void) {
+        let ids = ids.map(String.init).joined(separator: ",")
+        let request = URLRequest(url: URL(string: "?ids=\(ids)", relativeTo: OpenMensa.canteensURL)!)
+        Network.dataTask(request: request, session: session, completion: completion)
+    }
 }

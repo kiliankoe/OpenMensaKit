@@ -26,6 +26,22 @@ class OpenMensaKitTests: XCTestCase {
 
         waitForExpectations(timeout: 5)
     }
+
+    func testGetMultipleCanteens() {
+        let e = expectation(description: "Get a result for multiple canteens")
+
+        let dresden = [78,79,80,81,82,83,84,85,86,87,88,89,90,91,92]
+        Canteen.get(withIDs: dresden) { result in
+            switch result {
+            case .failure(let error):
+                XCTFail("Failed with error: \(error)")
+            case .success(_):
+                e.fulfill()
+            }
+        }
+
+        waitForExpectations(timeout: 5)
+    }
     
     static var allTests = [
         ("testGetSingleCanteen", testGetSingleCanteen),
