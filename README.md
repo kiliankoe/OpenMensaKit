@@ -33,7 +33,7 @@ canteen.getMeals(forDay: Date()) { result in
 ```
 
 ```swift
-// Get a list of meals for canteen on a specific day.
+// Get a list of meals for a canteen on a specific day.
 Meal.get(forCanteen: 79, onDay: Date()) { result in
     guard let meals = result.success else { return }
     print(meals)
