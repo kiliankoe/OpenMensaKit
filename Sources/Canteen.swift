@@ -19,14 +19,11 @@ public struct Canteen: Codable {
     public let city: String
     /// Address.
     public let address: String
-    private let coordinates: [Double]
+    private let coordinates: [Double]?
     /// Actual location.
-    public var coordinate: CLLocationCoordinate2D {
-        guard self.coordinates.count == 2 else {
-            print("Canteen has no associated coordinate.")
-            return CLLocationCoordinate2D()
-        }
-        return CLLocationCoordinate2D(latitude: self.coordinates[0], longitude: self.coordinates[1])
+    public var coordinate: CLLocationCoordinate2D? {
+        guard self.coordinates?.count == 2 else { return nil }
+        return CLLocationCoordinate2D(latitude: self.coordinates![0], longitude: self.coordinates![1])
     }
 }
 
