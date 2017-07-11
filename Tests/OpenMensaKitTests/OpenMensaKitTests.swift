@@ -11,13 +11,23 @@ import XCTest
 import OpenMensaKit
 
 class OpenMensaKitTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        //// XCTAssertEqual(OpenMensaKit().text, "Hello, World!")
+    func testGetSingleCanteen() {
+        let e = expectation(description: "Get a result for a single canteen")
+
+        let alteMensa = 79
+        Canteen.get(withID: alteMensa) { result in
+            switch result {
+            case .failure(let error):
+                XCTFail("Failed with error: \(error)")
+            case .success(_):
+                e.fulfill()
+            }
+        }
+
+        waitForExpectations(timeout: 5)
     }
     
     static var allTests = [
-        ("testExample", testExample),
+        ("testGetSingleCanteen", testGetSingleCanteen),
     ]
 }
