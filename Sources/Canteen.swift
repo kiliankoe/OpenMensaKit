@@ -84,4 +84,14 @@ extension Canteen {
         let request = URLRequest(url: URL(string: urlSuffix, relativeTo: OpenMensa.canteensURL)!)
         Network.dataTask(request: request, session: session, completion: completion)
     }
+
+    /// Get a list of meals served at this canteen for a given day.
+    ///
+    /// - Parameters:
+    ///   - day: date, defaults to today
+    ///   - session: URLSession, defaults to .shared
+    ///   - completion: handler
+    public func getMeals(forDay day: Date = Date(), session: URLSession = .shared, completion: @escaping (Result<[Meal]>) -> Void) {
+        Meal.get(forCanteen: self.id, onDay: day, session: session, completion: completion)
+    }
 }
