@@ -65,3 +65,19 @@ extension Meal.Price: Equatable {
             lhs.others == rhs.others
     }
 }
+
+// MARK: - API
+
+extension Meal {
+    /// Get a list of meals served at a specific canteen on a given day.
+    ///
+    /// - Parameters:
+    ///   - canteenID: the canteen serving the meals
+    ///   - day: date, defaults to today
+    ///   - session: URLSession, defaults to .shared
+    ///   - completion: handler
+    public static func get(forCanteen canteenID: Int, onDay day: Date = Date(), session: URLSession = .shared, completion: @escaping (Result<[Meal]>) -> Void) {
+        let request = URLRequest(url: OpenMensa.menuURL(forCanteenID: canteenID, onDay: day))
+        Network.dataTask(request: request, session: session, completion: completion)
+    }
+}

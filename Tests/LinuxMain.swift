@@ -2,5 +2,6 @@ import XCTest
 @testable import OpenMensaKitTests
 
 XCTMain([
-    testCase(OpenMensaKitTests.allTests),
+    testCase(CanteenTests.allTests),
+    testCase(MealTests.allTests)
 ])
