@@ -45,5 +45,6 @@ class OpenMensaKitTests: XCTestCase {
     
     static var allTests = [
         ("testGetSingleCanteen", testGetSingleCanteen),
+        ("testGetMultipleCanteens", testGetMultipleCanteens)
     ]
 }
