@@ -8,6 +8,7 @@
 
 import Foundation
 import XCTest
+import struct CoreLocation.CLLocationCoordinate2D
 import OpenMensaKit
 
 class OpenMensaKitTests: XCTestCase {
@@ -42,9 +43,26 @@ class OpenMensaKitTests: XCTestCase {
 
         waitForExpectations(timeout: 5)
     }
+
+    func testFindNear() {
+        let e = expectation(description: "Get a result for finding canteens near a coordinate")
+
+        let nuernbergerPlatz = CLLocationCoordinate2D(latitude: 51.0344374, longitude: 13.7279451)
+        Canteen.find(near: nuernbergerPlatz, distance: 0.5) { result in
+            switch result {
+            case .failure(let error):
+                XCTFail("Failed with error: \(error)")
+            case .success(_):
+                e.fulfill()
+            }
+        }
+
+        waitForExpectations(timeout: 5)
+    }
     
     static var allTests = [
         ("testGetSingleCanteen", testGetSingleCanteen),
-        ("testGetMultipleCanteens", testGetMultipleCanteens)
+        ("testGetMultipleCanteens", testGetMultipleCanteens),
+        ("testFindNear", testFindNear)
     ]
 }

@@ -68,4 +68,20 @@ extension Canteen {
         let request = URLRequest(url: URL(string: "?ids=\(ids)", relativeTo: OpenMensa.canteensURL)!)
         Network.dataTask(request: request, session: session, completion: completion)
     }
+
+    /// Find a list of canteens near a given coordinate.
+    ///
+    /// - Parameters:
+    ///   - location: coordinate to search around
+    ///   - distance: optional search radius in kilometers, defaults to 10km
+    ///   - session: URLSession, defaults to .shared
+    ///   - completion: handler
+    public static func find(near location: CLLocationCoordinate2D, distance: Float? = nil, session: URLSession = .shared, completion: @escaping (Result<[Canteen]>) -> Void) {
+        var urlSuffix = "?near[lat]=\(location.latitude)&near[lng]=\(location.longitude)"
+        if let distance = distance {
+            urlSuffix += "&near[dist]=\(distance)"
+        }
+        let request = URLRequest(url: URL(string: urlSuffix, relativeTo: OpenMensa.canteensURL)!)
+        Network.dataTask(request: request, session: session, completion: completion)
+    }
 }
