@@ -43,6 +43,12 @@ extension Canteen: Hashable {
     }
 }
 
+extension Canteen: CustomStringConvertible {
+    public var description: String {
+        return "\(self.name) \(self.address)"
+    }
+}
+
 // MARK: - API
 
 extension Canteen {

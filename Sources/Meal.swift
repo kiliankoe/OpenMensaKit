@@ -66,6 +66,21 @@ extension Meal.Price: Equatable {
     }
 }
 
+extension Meal: CustomStringConvertible {
+    public var description: String {
+        return "\(self.category): \(self.name) \(self.price)"
+    }
+}
+
+extension Meal.Price: CustomStringConvertible {
+    public var description: String {
+        return [self.students, self.employees, self.pupils, self.others]
+            .flatMap { $0 }
+            .map { "\($0)€" }
+            .joined(separator: " ")
+    }
+}
+
 // MARK: - API
 
 extension Meal {
