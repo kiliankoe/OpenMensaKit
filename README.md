@@ -20,6 +20,7 @@ Canteen.get(withIDs: [79, 80]) { result in
 }
 
 // Find a list of canteens near a given coordinate. A search radius can also be specified.
+let coordinate = CLLocationCoordinate2D(latitude: 51.0344374, longitude: 13.7279451)
 Canteen.find(near: coordinate) { result in
     guard let canteens = result.success else { return }
     print(canteens)
